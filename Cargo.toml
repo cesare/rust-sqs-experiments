@@ -3,5 +3,11 @@ name = "sqs_experiment"
 version = "0.1.0"
 authors = ["SAWADA Tadashi <cesare@mayverse.jp>"]
 
+[[bin]]
+name = "sqs-sender"
+path = "src/sqs_sender.rs"
+
 [dependencies]
+docopt = "0.7"
 rusoto = {version = "0.22", features = ["sqs"]}
+rustc-serialize = "0.3"
