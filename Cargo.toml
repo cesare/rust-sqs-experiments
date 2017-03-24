@@ -9,5 +9,5 @@ path = "src/sqs_sender.rs"
 
 [dependencies]
 docopt = "0.7"
-rusoto = {version = "0.22", features = ["sqs"]}
+rusoto = {version = "0.23", features = ["sqs"]}
 rustc-serialize = "0.3"
