@@ -37,9 +37,9 @@ fn parse_args() -> Args {
 
 fn main() {
     let args: Args = parse_args();
-
-    let provider: ProfileProvider = find_provider(&args.flag_profile).unwrap();
-    let region = find_region(&args.flag_region).unwrap();
+    let config: AwsConfig = AwsConfig::new(&args.flag_profile, &args.flag_region);
+    let provider: ProfileProvider = find_provider(&config).unwrap();
+    let region = find_region(&config).unwrap();
     let client = SqsClient::new(default_tls_client().unwrap(), provider, region);
     let mut request = SendMessageRequest::default();
     request.message_body = args.arg_message;
