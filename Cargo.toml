@@ -7,6 +7,10 @@ authors = ["SAWADA Tadashi <cesare@mayverse.jp>"]
 name = "sqs-sender"
 path = "src/sqs_sender.rs"
 
+[[bin]]
+name = "sqs-receiver"
+path = "src/sqs_receiver.rs"
+
 [dependencies]
 docopt = "0.7"
 rusoto = {version = "0.23", features = ["sqs"]}
